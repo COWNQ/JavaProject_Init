@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.omo.functions.mapper.FileMapper">
+
+    <resultMap id="BaseResultMap" type="com.omo.functions.domain.File">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="fileid" column="fileId" jdbcType="VARCHAR"/>
+            <result property="filename" column="fileName" jdbcType="VARCHAR"/>
+            <result property="fileurl" column="fileUrl" jdbcType="VARCHAR"/>
+            <result property="filesize" column="fileSize" jdbcType="DOUBLE"/>
+            <result property="filiecreatetime" column="filieCreateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,fileId,fileName,
+        fileUrl,fileSize,filieCreateTime,
+        fileBlobs
+    </sql>
+</mapper>
